@@ -1,10 +1,11 @@
-1. npm i
+1. Use node 18
+2. npm run dev
 
 Dev server:
 
-2. npm run dev
+3. npm run dev
 
 For production:
 
-2. npm run build
-3. npm run preview
+3. npm run build
+4. npm run preview
