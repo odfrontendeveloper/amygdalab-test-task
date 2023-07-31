@@ -5,12 +5,14 @@ import { PhotosSagaActions } from './photos.types'
 import axios, { AxiosResponse } from 'axios'
 import { selectPhotosPage } from '@app/store/photos/photos.selector'
 
+const randomNumber = () => Math.floor(Math.random() * 20)
+
 function* getPhotos() {
     try {
         yield put(setIsFetchingPhotos(true))
         yield put(setIsFetchingNewPhotos(true))
         const { data }: AxiosResponse<UserPhoto[]> = yield call(() =>
-            axios.get(`https://picsum.photos/v2/list?limit=4&page=${1}`),
+            axios.get(`https://picsum.photos/v2/list?limit=4&page=${randomNumber()}`),
         )
         yield put(setPhotos(data))
         yield put(setPage(1))
@@ -27,7 +29,7 @@ function* getMorePhotos() {
         const page: number = yield select(selectPhotosPage)
         yield put(setIsFetchingPhotos(true))
         const { data }: AxiosResponse<UserPhoto[]> = yield call(() =>
-            axios.get(`https://picsum.photos/v2/list?limit=4&page=${page + 1}`),
+            axios.get(`https://picsum.photos/v2/list?limit=4&page=${randomNumber()}`),
         )
         yield put(addPhotos(data))
         yield put(setPage(page + 1))

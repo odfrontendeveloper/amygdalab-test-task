@@ -30,7 +30,9 @@ const Content = () => {
                 className="contentItem"
                 key={item.id}
                 style={{
-                    backgroundImage: `url(${item.download_url}${grayscale ? '?grayscale' : ''})`,
+                    backgroundImage: `url(${`https://picsum.photos/id/${item.id}/400/500`}${
+                        grayscale ? '?grayscale' : ''
+                    })`,
                     backgroundSize: 'cover',
                 }}
             >
