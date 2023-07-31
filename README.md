@@ -1,4 +1,4 @@
-1. Use node 18
+1. Use node 18.13.0
 2. npm run dev
 
 Dev server:
