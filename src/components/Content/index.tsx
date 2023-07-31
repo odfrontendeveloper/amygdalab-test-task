@@ -7,9 +7,10 @@ import {
 } from '@app/store/photos/photos.selector'
 import { useValidatedTranslation } from '@app/utils/translation'
 import { UserPhoto } from '@app/store/photos/photos.types'
+import { getMorePhotos } from '@app/saga/photos/photos.actions'
+import ContentItem from '@app/components/ContentItem'
 import Button from '@app/components/Button'
 import './Content.styles.scss'
-import { getMorePhotos } from '@app/saga/photos/photos.actions'
 
 const Content = () => {
     const { t } = useValidatedTranslation()
@@ -24,25 +25,9 @@ const Content = () => {
         dispatch(getMorePhotos())
     }
 
-    const renderItem = (item: UserPhoto) => {
-        return (
-            <div
-                className="contentItem"
-                key={item.id}
-                style={{
-                    backgroundImage: `url(${`https://picsum.photos/id/${item.id}/400/500`}${
-                        grayscale ? '?grayscale' : ''
-                    })`,
-                    backgroundSize: 'cover',
-                }}
-            >
-                <div className="contentItemDescription">
-                    <div className="contentItemDescriptionAuthor">{item.author}</div>
-                    <div className="contentItemDescriptionUrl">{item.url}</div>
-                </div>
-            </div>
-        )
-    }
+    const renderItem = (item: UserPhoto) => (
+        <ContentItem key={item.id} id={item.id} author={item.author} url={item.url} grayscale={grayscale} />
+    )
 
     return (
         <>

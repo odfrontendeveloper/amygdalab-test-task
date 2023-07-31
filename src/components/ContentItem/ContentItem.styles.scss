@@ -1,0 +1,31 @@
+@import '@app/config/main.scss';
+
+.contentItem {
+    background-color: $skeleton_color;
+    height: 200px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    &Description {
+        padding: 7px 15px;
+        width: 100%;
+        background-color: $description_bg;
+
+        &Author {
+            padding: 4px;
+            padding-bottom: 0;
+            font-size: 12px;
+            color: $white_text;
+            font-family: $font_family;
+        }
+
+        &Url {
+            padding: 4px;
+            font-size: 10px;
+            color: $white_text;
+            font-family: $font_family;
+        }
+    }
+}
