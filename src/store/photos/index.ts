@@ -14,4 +14,5 @@ export const photosStore = createSlice<
     reducers,
 })
 
-export const { setIsFetchingPhotos, setIsFetchingNewPhotos, setPhotos, addPhotos, setPage, setGrayscale, resetStore } = photosStore.actions
+export const { setIsFetchingPhotos, setIsFetchingNewPhotos, setPhotos, addPhotos, setPage, setGrayscale, resetStore } =
+    photosStore.actions

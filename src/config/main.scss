@@ -17,36 +17,12 @@ $switch_content: #7c7c7c;
 $text_color: #282828;
 
 $skeleton_color: #d4d4d4;
-$description_bg: rgba($color: #000000, $alpha: 0.5);
+$description_bg: rgba(
+    $color: #000000,
+    $alpha: 0.5,
+);
+$shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
 
 * {
     box-sizing: border-box !important;
-}
-
-html,
-body,
-#root {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-}
-
-#root {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    max-width: 750px;
-
-    @media (min-width: 751px) {
-        justify-content: center;
-    }
-
-    @media (max-width: 750px) {
-        width: 100%;
-    }
 }
