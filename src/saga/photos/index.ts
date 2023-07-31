@@ -1,9 +1,9 @@
+import axios, { AxiosResponse } from 'axios'
 import { call, put, select, takeEvery } from 'redux-saga/effects'
 import { addPhotos, setIsFetchingNewPhotos, setIsFetchingPhotos, setPage, setPhotos } from '@app/store/photos'
+import { selectPhotosPage } from '@app/store/photos/photos.selector'
 import { UserPhoto } from '@app/store/photos/photos.types'
 import { PhotosSagaActions } from './photos.types'
-import axios, { AxiosResponse } from 'axios'
-import { selectPhotosPage } from '@app/store/photos/photos.selector'
 
 const randomNumber = () => Math.floor(Math.random() * 20)
 
