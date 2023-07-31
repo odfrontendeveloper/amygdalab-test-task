@@ -1,0 +1,19 @@
+@import '@app/config/main.scss';
+
+.header {
+    width: 100%;
+    padding: 8px;
+
+    &Title {
+        padding-top: 20px;
+        font-size: 18px;
+        font-family: $font_family;
+    }
+
+    &Content {
+        padding-top: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

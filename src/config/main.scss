@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// font
+$font_family: 'Inter';
+
+// button
+$button_bg: #a000a0;
+$button_bg_hover: #830083;
+$button_bg_active: #660066;
+$button_bg_disabled: #c3c3c3;
+$white_text: #ffffff;
+
+// switch
+$switch_off: #a000a0;
+$switch_on: #909090;
+$switch_content: #7c7c7c;
+$text_color: #282828;
+
+$skeleton_color: #d4d4d4;
+$description_bg: rgba($color: #000000, $alpha: 0.5);
+
+* {
+    box-sizing: border-box !important;
+}
+
+html,
+body,
+#root {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 750px;
+
+    @media (min-width: 751px) {
+        justify-content: center;
+    }
+
+    @media (max-width: 750px) {
+        width: 100%;
+    }
+}

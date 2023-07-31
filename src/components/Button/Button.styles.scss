@@ -1,0 +1,31 @@
+@import '@app/config/main.scss';
+
+.button {
+    padding: 9px 12px;
+    border-radius: 4px;
+    border: 0;
+    outline: 0;
+    background-color: $button_bg;
+    color: $white_text;
+    font-family: $font_family;
+    font-size: 13px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+    &:hover {
+        background-color: $button_bg_hover;
+    }
+
+    &:active {
+        background-color: $button_bg_active;
+    }
+
+    &:disabled {
+        background-color: $button_bg_disabled;
+    }
+}
